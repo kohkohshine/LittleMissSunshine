@@ -1,19 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <!--nav-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+<!--Bootstrap-->   
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+<!--Bootstrap Icons-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+<!--Bootswatch Theme-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sketchy/bootstrap.min.css">
+
+
 </head>
+
 <body>
-    <!--Kim-->
-     <!--k in the beginning for every id-->
-    <section><nav></nav></section>
+
+  <!--Kim-->
+  <!--k in the beginning for every id-->
+
+  <section>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#kOffcanvasNavbar"
+          aria-controls="kOffcanvasNavbar" id="kToggler">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#" id="kBrand">My To do's</a>
+
+        <div class="dropdown ms-auto">
+          <a href="#" id="kOptions" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-three-dots-vertical text-white"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Settings</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Log Out</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> Account</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-share"></i> Share</a></li>
+          </ul>
+        </div>
+
+        <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="kOffcanvasNavbar"
+          aria-labelledby="kOffcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="kOffcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"
+              id="kCloseBtn"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item" id="kHome">
+                <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house-door"></i> Home</a>
+              </li>
+              <li class="nav-item" id="kCalendar">
+                <a class="nav-link" href="#"><i class="bi bi-search"></i> Search</a>
+              </li>
+              <li class="nav-item" id="kTodoList">
+                <a class="nav-link" href="#"><i class="bi bi-calendar"></i> Calendar</a>
+              </li>
+              <li class="nav-item" id="kProfile">
+                <a class="nav-link" href="#"><i class="bi bi-person"></i> Profile</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+  
     <!--Nora-->
      <!--n in the beginning for every id-->
-    <section><main>
+  
+    <section>
+      <main>
       <div class="card p-4 position-absolute top-50 start-50 translate-middle" style="width: 40vw;">
         <div class=" mb-2 mx-5">
           <label for="exampleFormControlInput1" class="form-label">Date</label>
@@ -31,12 +106,69 @@
         <button type="button" class="btn btn-primary px-5">Save</button>
       </div>
       </div>
-    </main></section>
-    <!--Harun-->
-    <!--h in the beginning for every id-->
-    <section></section>
+    </main>
+  </section>
+
+
+  <!--Harun-->
+  <section>
+  
+    <!--Card Example-->
+    
+    <div class="card shadow" style="width: 18rem; margin: 0 auto;">
+      <div class="card-body">
+        <div class="d-flex justify-content-end">
+          <p class="p-0" style="font-size: 10px;"  id="hDate">01/08/2023</p>
+        </div>
+        <h5 class="card-title" style="margin-top: -1.5rem;">Card title: </h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="gap-1 hIcons">
+          <button  class="btn btn-primary" type="button" style="font-size: 1.2rem;"> 
+            <i class="bi bi-pencil-square"></i>
+          </button>
+            <button  class="btn btn-danger" type="button"  style="font-size: 1.2rem;"> 
+              <i class="bi bi-trash"></i>
+            </button>
+            <button  class="btn btn-success" type="button"  style="font-size: 1.2rem;"> 
+              <i class="bi bi-check-circle"></i> 
+            </button>
+        </div>
+      </div>
+    </div>
+
+<!--Card Done Example-->
+
+    <div class="card shadow mt-1" style="width: 18rem; margin: 0 auto;">
+      <div class="card-body">
+        <div class="d-flex justify-content-end">
+          <p class="p-0" style="font-size: 10px;"  id="hDate">
+            <del>01/08/2023</del></p>
+        </div>
+        <h5 class="card-title" style="margin-top: -1.5rem;"><del>Card title:</del> </h5>
+        <p class="card-text"> <del>
+          Some quick example text to build on the card title and make up the bulk of the card's content.
+        </del> </p>
+        <div class="gap-1 hIcons">
+          <button  class="btn btn-primary" type="button" style="font-size: 1.2rem;"> 
+            <i class="bi bi-pencil-square"></i>
+          </button>
+            <button  class="btn btn-danger" type="button"  style="font-size: 1.2rem;"> 
+              <i class="bi bi-trash"></i> 
+            </button>
+            <button  class="btn btn-danger " type="button"  style="font-size: 1.2rem;"> 
+              <i class="bi bi-x-circle"></i> 
+            </button>
+        </div>
+      </div>
+    </div>
+  
+    </section>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="index.js"></script>
+
 </body>
+
 </html>
