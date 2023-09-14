@@ -1,3 +1,13 @@
+html,
+body {
+    background-color: rgb(248, 200, 220);
+    
+}
+
+#hBgColor {
+    background-color: rgb(248, 200, 220) ;
+}
+
 .card .hIcons {
     display: none;
    
@@ -17,4 +27,6 @@
     background-color: rgba(255, 255, 255, 0.7); 
     z-index: 1;
 }
+
+
 
