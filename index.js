@@ -68,6 +68,12 @@ addBtn.addEventListener('click',() => {
     let btnDelete = document.createElement('button');
     btnDelete.classList.add('btn','btn-danger');
     btnDelete.style.fontSize = '1.2 rem';
+    btnDelete.addEventListener('click', () => {
+      myToDoList.removeChild(divParent);
+      localStorage.removeItem(cardData);
+      cardData.remove='true';
+    });
+
     
     let iconDelete = document.createElement('i');
     iconDelete.classList.add('bi-trash');
@@ -121,7 +127,7 @@ date.value = '';
 });
 
 
-function showTheStoredData () {
+function showStoredData () {
     const storedData = JSON.parse(localStorage.getItem('cards')) || [];
 
   storedData.forEach((cardData) => {
@@ -173,6 +179,12 @@ function showTheStoredData () {
     let btnDelete = document.createElement('button');
     btnDelete.classList.add('btn','btn-danger');
     btnDelete.style.fontSize = '1.2 rem';
+    btnDelete.addEventListener('click', () => {
+      myToDoList.removeChild(divParent);
+      localStorage.removeItem(cardData);
+      cardData.remove='true';
+    });
+
     
     let iconDelete = document.createElement('i');
     iconDelete.classList.add('bi-trash');
@@ -211,6 +223,3 @@ deleteAllBtn.addEventListener('click', () => {
   });
 
 deleteAllBtn.addEventListener('click',clearAllHandler);
-
-
-
